@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Exceptions/InvalidUserEmailException.php';
+require_once __DIR__ . '/../Exeptions/InvalidUserEmailException.php';
 class UserEmail
 {
     private $value;

@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Exceptions/InvalidUserRoleException.php';
+require_once __DIR__ . '/../Exeptions/InvalidUserRoleException.php';
 class UserRoleEnum
 {
     const ADMIN = 'ADMIN';

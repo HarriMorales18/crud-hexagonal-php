@@ -9,6 +9,12 @@
         </div>
     <?php endif; ?>
 
+    <?php if (!empty($errors['login'])): ?>
+        <div class="alert-error">
+            <?= htmlspecialchars($errors['login'], ENT_QUOTES, 'UTF-8') ?>
+        </div>
+    <?php endif; ?>
+
     <form method="POST" action="?route=auth.authenticate">
         <div class="form-group">
             <label for="email">Correo electrónico</label><br>

@@ -230,17 +230,23 @@ try {
 
             $loginUseCase = DependencyInjection::getLoginUseCase();
             $command = new LoginCommand($email, $password);
-            $user = $loginUseCase->execute($command);
+            try {
+                $user = $loginUseCase->execute($command);
 
-            $_SESSION['auth'] = array(
-                'id' => $user->id()->value(),
-                'name' => $user->name()->value(),
-                'email' => $user->email()->value(),
-                'role' => $user->role(),
-            );
+                $_SESSION['auth'] = array(
+                    'id' => $user->id()->value(),
+                    'name' => $user->name()->value(),
+                    'email' => $user->email()->value(),
+                    'role' => $user->role(),
+                );
 
-            Flash::setSuccess('Bienvenido/a, ' . $user->name()->value() . '.');
-            View::redirect('home');
+                Flash::setSuccess('Bienvenido/a, ' . $user->name()->value() . '.');
+                View::redirect('home');
+            } catch (Exception $e) {
+                Flash::setErrors(['login' => 'Correo o contraseña incorrectos.']);
+                Flash::setOld(['email' => $email]);
+                View::redirect('auth.login');
+            }
             break;
 
         // ── Logout ────────────────────────────────────────────

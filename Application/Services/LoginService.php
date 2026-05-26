@@ -6,7 +6,7 @@ require_once __DIR__ . '/Dto/Commands/LoginCommand.php';
 require_once __DIR__ . '/../../Domain/Models/UserModel.php';
 require_once __DIR__ . '/../../Domain/ValueObjects/UserEmail.php';
 require_once __DIR__ . '/../../Domain/Enums/UserStatusEnum.php';
-require_once __DIR__ . '/../../Domain/Exceptions/InvalidCredentialsException.php';
+require_once __DIR__ . '/../../Domain/Exeptions/InvalidCredentialsException.php';
 final class LoginService implements LoginUseCase
 {
     private GetUserByEmailPort $getUserByEmailPort;

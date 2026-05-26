@@ -10,11 +10,11 @@ final class Connection
     private string $charset;
 
     public function __construct(
-        string $host,
-        int $port,
-        string $database,
-        string $username,
-        string $password,
+        string $host = 'localhost',
+        int $port = 3306,
+        string $database = 'crud_usuarios',
+        string $username = 'root',
+        string $password = '',
         string $charset = 'utf8mb4'
     ) {
         $this->host = $host;
