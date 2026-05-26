@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Exeptions/InvalidUserStatusException.php';
+require_once __DIR__ . '/../Exceptions/InvalidUserStatusException.php';
 class UserStatusEnum
 {
     const ACTIVE = 'ACTIVE';

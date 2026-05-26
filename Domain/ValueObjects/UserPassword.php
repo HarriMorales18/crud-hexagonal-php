@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-require_once __DIR__ . '/../Exeptions/InvalidUserPasswordException.php';
+require_once __DIR__ . '/../Exceptions/InvalidUserPasswordException.php';
 
 final class UserPassword
 {

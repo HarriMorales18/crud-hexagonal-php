@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../Exeptions/InvalidUserNameException.php';
+require_once __DIR__ . '/../Exceptions/InvalidUserNameException.php';
 class UserName
 {
     private $value;
